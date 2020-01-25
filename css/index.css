@@ -1,0 +1,36 @@
+.logo{
+    border-radius:100%;
+    width:150px;
+    height:150px;
+}
+
+nav img {
+    display: inline-block;
+  }
+  
+  .nav {
+    display: inline-block;
+    float: right;
+  }
+  
+  .nav li {
+    display: inline-block;
+    padding: 10px;
+    
+    font-family: Oswald;
+    color: #b3d9ff;
+    border: 3px dotted black;
+  }
+  .nav li a{
+     color: #b3d9ff;
+     font-size: 23px;
+     text-decoration: none;
+  }
+  .nav li:hover{
+    background-color:peachpuff;
+    transition:.5s;
+    cursor:pointer;
+  }
+  .nav li:hover a{ 
+    color: white;
+  }
