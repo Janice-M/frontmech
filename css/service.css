@@ -1,9 +1,6 @@
-.rounded{
-    width: 8%;
-    height: 10%;
-    float: right;
+body{
+    margin:0 auto;
+    width:720px;
 }
 
-p{
-    float: left;
-}
+
