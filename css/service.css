@@ -1,5 +1,9 @@
-.img-thumbnail{
-    width: 150px;
-    height: 150px;
+.rounded{
+    width: 8%;
+    height: 10%;
     float: right;
+}
+
+p{
+    float: left;
 }
