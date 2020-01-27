@@ -6,5 +6,3 @@ https://www.flaticon.com/free-icons/car-parts
 
 
 
-![screenshot](images/image4.jpeg)
-
