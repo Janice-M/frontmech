@@ -6,3 +6,5 @@ body{
 .card-title, h1{
     color:blue;
 }
+.navbar-brand img {width: 150px;
+    color: rgb(231, 230, 228);}
