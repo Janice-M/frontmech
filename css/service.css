@@ -3,6 +3,6 @@ body{
   
 }
 
-.card-title{
-    color: royalblue;
+.card-title, h1{
+    color:blue;
 }
