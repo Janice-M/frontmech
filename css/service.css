@@ -12,3 +12,8 @@ body{
     .jumbotron {
         background-color: white !important;
     }
+
+    .row no-gutters{
+        border-color:#0E7EEE;
+    }
+    
