@@ -13,8 +13,9 @@ body{
         background-color: #0E7EEE !important;
     }
 
-    .row no-gutters, card {
-        border-color:#0E7EEE;
+    .row  {
+        border-top :2px solid #0E7EEE;
+        border-bottom :2px solid #0E7EEE;
         padding-top: 25px;
     }
     
@@ -27,7 +28,7 @@ body{
 
     img{
         padding-top: 25px;
-        border:1px solid #0E7EEE;
+        border:2px solid #0E7EEE;
         width: 50%;
         height: 50%;
     }
