@@ -1,0 +1,13 @@
+.jumbotron {
+    background-color: #0E7EEE !important;
+}
+img{
+    
+    border:2px solid #0E7EEE;
+    
+}
+.row  {
+    border-top :2px solid #0E7EEE;
+    border-bottom :2px solid #0E7EEE;
+    padding-top: 25px;
+}
