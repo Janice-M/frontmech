@@ -1,13 +1,10 @@
 import React from 'react';
 
-
-function Home() {
+const Home = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div className='container'>
     </div>
   );
-}
+};
 
 export default Home;

@@ -1,0 +1,33 @@
+%nav-default-size {
+  height: $page-height/4;
+  width: $page-width;
+}
+
+.nav {
+  @extend %nav-default-size;
+  margin: 0;
+
+  @include for-phone-only {
+    position: fixed;
+   }
+}
+
+.nav-content {
+  position: relative;
+
+  &__image {
+    @extend %nav-default-size;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__icon-row {
+    height: 10vh;
+    width: $page-width - 10vw;
+    margin-left: 5vw;
+
+    display: flex;
+  }
+}

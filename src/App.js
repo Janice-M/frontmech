@@ -1,9 +1,12 @@
 import React from 'react';
-import Home from './components/home'
+
+import AppRoutes from './routes'
 
 function App() {
   return (
-    <Home />
+    <React.Fragment>
+        <AppRoutes />
+    </React.Fragment>
   );
 }
 
