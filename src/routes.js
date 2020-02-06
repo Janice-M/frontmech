@@ -6,7 +6,7 @@ import Home from './components/home'
 import Services from './components/services'
 import Stores from './components/stores'
 import Navbar from './components/navbar/index'
-import BottomTab from './components/bottomtabs'
+import BottomTab from './components/bottomtabs/'
 import NavContextProvider from './context/navbarContext'
 
 

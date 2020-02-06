@@ -2,8 +2,7 @@
 import React, { useContext } from 'react';
 
 import { NavBarContext } from '../../context/navbarContext'
-import { IconCta } from '../../common/ctas/index'
-import Image from '../../common/image/index'
+import { IconCta, Image } from '../../common'
 import  ImageAssets from '../../res/images/index'
 
 const { mechLogo, navCart, navSearch, sideBarIcon, backDrop } = ImageAssets

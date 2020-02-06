@@ -4,4 +4,11 @@
 @import 'variables.scss';
 
 /* Component styles*/
-@import '../../components/navbar'
+@import '../../components/navbar';
+@import '../../components';
+
+
+/* Common styles */
+@import '../../common/ctas';
+@import '../../common/image';
+@import '../../common/section';

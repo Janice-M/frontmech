@@ -4,11 +4,7 @@
 }
 
 .nav {
-  @extend %nav-default-size;
-  margin: 0;
-
   @include for-phone-only {
-    position: fixed;
    }
 }
 
@@ -17,16 +13,16 @@
 
   &__image {
     @extend %nav-default-size;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
   }
 
   &__icon-row {
-    height: 10vh;
-    width: $page-width - 10vw;
-    margin-left: 5vw;
+    height: 5vh;
+    width: $content-width;
+    margin: 5vh 5vw;
 
     display: flex;
   }

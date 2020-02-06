@@ -1,0 +1,31 @@
+.tile-cta {
+  height: 100px;
+  width: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: $color-white;
+  box-shadow: $box-shadow;
+
+  cursor: pointer;
+
+  &__image {
+    width: 50%;
+    margin-bottom: 5px;
+  }
+
+  &__label {
+    @extend .label-styles;
+
+    height: 30%;
+    width: 100%
+  }
+}
+
+.tiles {
+  display: flex;
+  justify-content: space-around;
+}

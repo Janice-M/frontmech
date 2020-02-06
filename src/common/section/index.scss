@@ -1,0 +1,23 @@
+
+.section {
+  width: $content-width;
+
+  &__header {
+    width: auto;
+    max-width: 75%;
+    height: 40px;
+    margin: 20px 0;
+    margin-left: -5vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $color-white;
+    background-color: $CTA-primary-color;
+
+    span {
+      @extend .header-styles
+    }
+  }
+}

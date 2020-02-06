@@ -1,0 +1,14 @@
+
+.container {
+  width: $content-width;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 5;
+
+  .hero {
+    width: inherit;
+
+    box-shadow: $box-shadow;
+  }
+}

@@ -6,7 +6,7 @@ export const NavBarContext = createContext();
 const NavContextProvider = ({ children }) => {
   const [content, setContent] = useState({});
 
-  const addHeaderContent = book => {
+  const addHeaderContent = () => {
     setContent({});
   };
 
