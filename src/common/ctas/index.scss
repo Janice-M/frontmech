@@ -1,6 +1,7 @@
 .tile-cta {
   height: 100px;
   width: 100px;
+  position: relative;
 
   display: flex;
   justify-content: center;
@@ -15,13 +16,18 @@
   &__image {
     width: 50%;
     margin-bottom: 5px;
+
+    margin-bottom: 30%;
   }
 
   &__label {
     @extend .label-styles;
 
     height: 30%;
-    width: 100%
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
   }
 }
 
