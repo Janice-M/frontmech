@@ -11,6 +11,10 @@
   box-shadow: $box-shadow;
   background: $color-white;
 
+  @include for-tablet-landscape-up () {
+    display: none;
+  }
+
   .tile-cta {
     height: inherit;
     box-shadow: none;

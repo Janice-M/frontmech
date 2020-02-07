@@ -5,6 +5,33 @@
 
   position: relative;
   z-index: 5;
+
+  @include for-tablet-landscape-up () {
+    display: none;
+  }
+
+}
+
+.desktop {
+  display: none;
+
+  @include for-tablet-landscape-up () {
+    display: block;
+    width: 800px;
+    margin: 0 auto;
+  }
+  .desktop-hero {
+    margin-top: 10vh;
+    width: 800px;
+    box-shadow: $box-shadow;
+  }
+
+  .desktop-caption {
+    margin-top: 20px;
+    .label-styles {
+      text-align: left;
+    }
+  }
 }
 
 .home {

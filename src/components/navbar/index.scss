@@ -26,11 +26,13 @@
 
     display: flex;
 
+    @include for-tablet-landscape-up () {
+      display: none;
+    }
+
     &--section {
       width: $content-width/3;
       display: flex;
-
-
     }
   }
 
