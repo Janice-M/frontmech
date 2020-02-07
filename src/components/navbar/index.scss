@@ -25,5 +25,26 @@
     margin: 5vh 5vw;
 
     display: flex;
+
+    &--section {
+      width: $content-width/3;
+      display: flex;
+
+
+    }
+  }
+
+  .checkout-section {
+    display: flex;
+    justify-content: flex-end;
+
+    .icon-cta {
+      margin: 0 5px;
+    }
+  }
+
+  .nav-header {
+    display: flex;
+    justify-content: center;
   }
 }

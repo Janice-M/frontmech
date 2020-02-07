@@ -14,10 +14,16 @@ const NavBar = () => {
       <div className='nav-content' >
         <Image className='nav-content__image' src={backDrop[0]} srcSet={backDrop} />
         <div className='nav-content__icon-row'>
-          <IconCta icon={sideBarIcon[0]} iconSet={sideBarIcon} />
-          <IconCta icon={mechLogo[0]} iconSet={mechLogo} />
-          <IconCta icon={navSearch[0]} iconSet={navSearch} />
-          <IconCta icon={navCart[0]} iconSet={navCart} />
+          <div className='nav-content__icon-row--section'>
+            <IconCta icon={sideBarIcon[0]} iconSet={sideBarIcon} />
+          </div>
+          <div className='nav-content__icon-row--section nav-header'>
+            <IconCta icon={mechLogo[0]} iconSet={mechLogo} />
+          </div>
+          <div className='nav-content__icon-row--section checkout-section'>
+            <IconCta icon={navSearch[0]} iconSet={navSearch} />
+            <IconCta icon={navCart[0]} iconSet={navCart} />
+          </div>
         </div>
       </div>
     </div>
