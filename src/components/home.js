@@ -22,7 +22,7 @@ const Home = () => {
   let history = useHistory();
 
   return (
-    <div className='container'>
+    <div className='container home'>
       <Image className="hero" src={homeHero[0]} srcSet={homeHero}/>
       <Section
         header='My Dashboard'
@@ -41,6 +41,7 @@ const Home = () => {
         />
       <Section
         header='Featured Services'
+        labelStyle='featuted-services'
         label={
           <div className='tiles'>
             {servicesLayout.map((service) => (
