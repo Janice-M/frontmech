@@ -16,7 +16,7 @@
 
   .section {
 
-    .featuted-services {
+    .featured-services {
       .tile-cta:nth-child(2) {
         .image {
           width: 80%;
@@ -50,4 +50,44 @@
     }
   }
 
+}
+
+.store {
+
+  .input:nth-child(1) {
+    flex-direction: row-reverse;
+  }
+
+  .input__content {
+    padding-left: 10px;
+
+  }
+
+  .section {
+    .category {
+      .tiles {
+        flex-wrap: wrap;
+
+        .tile-cta:nth-child(5) {
+          .image {
+            width: 30%;
+          }
+
+          .tile-cta__label {
+            font-size: 12px;
+          }
+        }
+      }
+
+    }
+
+    .accesories{
+      .tiles{
+        .tile-cta {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
 }

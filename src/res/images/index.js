@@ -78,6 +78,45 @@ import suspensionIcon from './suspension.png';
 import suspensionIcon2x from './suspension@2x.png';
 import suspensionIcon3x from './suspension@3x.png';
 
+import add from './add.png';
+import add2x from './add@2x.png';
+import add3x from './add@3x.png';
+
+import airFilter from './air-filter.png';
+import airFilter2x from './air-filter@2x.png';
+import airFilter3x from './air-filter@3x.png';
+
+import brakePads from './brake-pads.png';
+import brakePads2x from './brake-pads@2x.png';
+import brakePads3x from './brake-pads@3x.png';
+
+import carLight from './car-light.png';
+import carLight2x from './car-light@2x.png';
+import carLight3x from './car-light@3x.png';
+
+import fabric from './fabric.png';
+import fabric2x from './fabric@2x.png';
+import fabric3x from './fabric@3x.png';
+
+import shockAbsorber from './shock-absorber.png';
+import shockAbsorber2x from './shock-absorber@2x.png';
+import shockAbsorber3x from './shock-absorber@3x.png';
+
+import sparkPlug from './spark-plug.png';
+import sparkPlug2x from './spark-plug@2x.png';
+import sparkPlug3x from './spark-plug@3x.png';
+
+import starter from './starter-1.png';
+import starter2x from './starter-1@2x.png';
+import starter3x from './starter-1@3x.png';
+
+import tank from './tank.png';
+import tank2x from './tank@2x.png';
+import tank3x from './tank@3x.png';
+
+import search from './search.png';
+import search2x from './search@2x.png';
+import search3x from './search@3x.png';
 
 export default {
   mechLogo: [mechLogo, mechLogo2x, mechLogo3x],
@@ -99,5 +138,15 @@ export default {
   suspensionIcon: [suspensionIcon, suspensionIcon2x, suspensionIcon3x],
   starterIcon: [starterIcon, starterIcon2x, starterIcon3x],
   brakeIcon: [brakeIcon, brakeIcon2x, brakeIcon3x],
+  add: [add, add2x, add3x],
+  airFilter: [airFilter, airFilter2x, airFilter3x],
+  brakePads: [brakePads, brakePads2x, brakePads3x],
+  carLight: [carLight, carLight2x, carLight3x],
+  fabric: [fabric, fabric2x, fabric3x],
+  shockAbsorber: [shockAbsorber, shockAbsorber2x, shockAbsorber3x],
+  sparkPlug: [sparkPlug, sparkPlug2x, sparkPlug3x],
+  starter: [starter, starter2x, starter3x],
+  tank: [tank, tank2x, tank3x],
+  search: [search, search2x, search3x],
   serviceIcon: [serviceIcon, serviceIcon2x, serviceIcon3x]
 }

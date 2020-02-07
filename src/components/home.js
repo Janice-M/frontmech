@@ -41,7 +41,7 @@ const Home = () => {
         />
       <Section
         header='Featured Services'
-        labelStyle='featuted-services'
+        labelStyle='featured-services'
         label={
           <div className='tiles'>
             {servicesLayout.map((service) => (
