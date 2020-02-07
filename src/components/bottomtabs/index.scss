@@ -1,0 +1,26 @@
+.bottom-tab {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+
+  bottom: 0;
+  z-index: 5;
+
+  width: 100vw;
+  height: 10vh;
+  box-shadow: $box-shadow;
+
+  .tile-cta {
+    height: inherit;
+    box-shadow: none;
+
+    &__image {
+      width: 35%;
+    }
+
+    &__label {
+      font-size: 12px;
+      height: unset;
+    }
+  }
+}

@@ -4,12 +4,18 @@ import { useHistory } from "react-router-dom";
 import { Section, Image, TileCta } from '../common'
 import  ImageAssets from '../res/images/index'
 
-const { homeHero, myCar, service, shop } = ImageAssets
+const { homeHero, myCar, service, shop, tints, security, diagonistics } = ImageAssets
 
-const dashboardData = [
+const dashboardLayout = [
   { label: 'Service', images: service, route: '/service'},
   { label: 'Shop', images: shop, route: '/store'},
   { label: 'My Cars', images: myCar, route: '/my-car'}
+]
+
+const servicesLayout = [
+  { label: 'Diagonistics', images: diagonistics, route: '/diagonistics'},
+  { label: 'Tints', images: tints, route: '/tints'},
+  { label: 'Security', images: security, route: '/security'}
 ]
 
 const Home = () => {
@@ -22,7 +28,7 @@ const Home = () => {
         header='My Dashboard'
         label={
           <div className='tiles'>
-            {dashboardData.map((dashboardItem) => (
+            {dashboardLayout.map((dashboardItem) => (
               <TileCta
                 handleClick={() => history.push(dashboardItem.route)}
                 label={dashboardItem.label}
@@ -33,7 +39,21 @@ const Home = () => {
           </div>
           }
         />
-      <Section header='Featured Services'/>
+      <Section
+        header='Featured Services'
+        label={
+          <div className='tiles'>
+            {servicesLayout.map((service) => (
+              <TileCta
+                handleClick={() => history.push(service.route)}
+                label={service.label}
+                image={service.images[0]}
+                imageSet={service.images}
+                />
+            ))}
+          </div>
+          }
+        />
     </div>
   );
 };
