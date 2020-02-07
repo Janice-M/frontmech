@@ -50,13 +50,34 @@ import tints from './tints.png';
 import tints2x from './tints@2x.png';
 import tints3x from './tints@3x.png';
 
-import diagonistics from './diagonistics.png';
-import diagonistics2x from './diagonistics@2x.png';
-import diagonistics3x from './diagonistics@3x.png';
+import diagnostics from './diagnostics.png';
+import diagnostics2x from './diagnostics@2x.png';
+import diagnostics3x from './diagnostics@3x.png';
 
 import security from './security.png';
 import security2x from './security@2x.png';
 import security3x from './security@3x.png';
+
+import serviceIcon from './service-icon.png';
+import serviceIcon2x from './service-icon@2x.png';
+import serviceIcon3x from './service-icon@3x.png';
+
+import diagnosticsIcon from './diagnostics-icon.png';
+import diagnosticsIcon2x from './diagnostics-icon@2x.png';
+import diagnosticsIcon3x from './diagnostics-icon@3x.png';
+
+import brakeIcon from './brake.png';
+import brakeIcon2x from './brake@2x.png';
+import brakeIcon3x from './brake@3x.png';
+
+import starterIcon from './starter.png';
+import starterIcon2x from './starter@2x.png';
+import starterIcon3x from './starter@3x.png';
+
+import suspensionIcon from './suspension.png';
+import suspensionIcon2x from './suspension@2x.png';
+import suspensionIcon3x from './suspension@3x.png';
+
 
 export default {
   mechLogo: [mechLogo, mechLogo2x, mechLogo3x],
@@ -73,5 +94,10 @@ export default {
   home: [home, home2x, home3x],
   tints: [tints, tints2x, tints3x],
   security: [security, security2x, security3x],
-  diagonistics: [diagonistics, diagonistics2x, diagonistics3x]
+  diagnostics: [diagnostics, diagnostics2x, diagnostics3x],
+  diagnosticsIcon: [diagnosticsIcon, diagnosticsIcon2x, diagnosticsIcon3x],
+  suspensionIcon: [suspensionIcon, suspensionIcon2x, suspensionIcon3x],
+  starterIcon: [starterIcon, starterIcon2x, starterIcon3x],
+  brakeIcon: [brakeIcon, brakeIcon2x, brakeIcon3x],
+  serviceIcon: [serviceIcon, serviceIcon2x, serviceIcon3x]
 }

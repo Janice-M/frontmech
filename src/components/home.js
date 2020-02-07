@@ -4,16 +4,16 @@ import { useHistory } from "react-router-dom";
 import { Section, Image, TileCta } from '../common'
 import  ImageAssets from '../res/images/index'
 
-const { homeHero, myCar, service, shop, tints, security, diagonistics } = ImageAssets
+const { homeHero, myCar, service, shop, tints, security, diagnostics } = ImageAssets
 
 const dashboardLayout = [
-  { label: 'Service', images: service, route: '/service'},
+  { label: 'Service', images: service, route: '/services'},
   { label: 'Shop', images: shop, route: '/store'},
   { label: 'My Cars', images: myCar, route: '/my-car'}
 ]
 
 const servicesLayout = [
-  { label: 'Diagonistics', images: diagonistics, route: '/diagonistics'},
+  { label: 'diagnostics', images: diagnostics, route: '/diagnostics'},
   { label: 'Tints', images: tints, route: '/tints'},
   { label: 'Security', images: security, route: '/security'}
 ]

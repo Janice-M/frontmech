@@ -1,0 +1,40 @@
+
+.content-tile {
+  width: $content-width - 10;
+  height: 10vh;
+  margin: 10px auto;
+  padding: 15px 0;
+
+  background: $color-white;
+  display: flex;
+  align-items: center;
+
+  border-bottom: 0.1px $color-grey solid;
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    .image {
+      width: 60%;
+    }
+  }
+
+  &__content {
+    width: 70%;
+
+    &--head {
+      @extend .header-styles;
+    }
+
+    &--caption {
+      @extend .label-styles;
+
+      text-align: unset;
+    }
+  }
+}

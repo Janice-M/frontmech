@@ -17,11 +17,14 @@
 
     &__image {
       width: 35%;
+      margin-bottom: unset;
     }
 
     &__label {
       font-size: 12px;
       height: unset;
+      padding-bottom: 5px;
+      color: $color-grey;
     }
   }
 }
