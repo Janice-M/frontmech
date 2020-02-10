@@ -19,7 +19,7 @@ const Dropdowm = ({title, image, imageStyle, items}) => {
 
 
   return (
-    <div className='dropdown'>
+    <div  className='dropdown'>
       <div onClick={() => toggleList()} className={`dropdown__header ${imageStyle}`}>
         <Input
           className="dropdown-cta"

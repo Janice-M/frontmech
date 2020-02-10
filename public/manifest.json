@@ -3,17 +3,17 @@
   "name": "My Mech",
   "icons": [
     {
-      "src": "/Users/justmesam/Downloads/assets/1x/home.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "home.png",
+      "sizes": "64x64",
       "type": "image/x-icon"
     },
     {
-      "src": "/Users/justmesam/Downloads/assets/1x/home.png",
+      "src": "home@2x.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/Users/justmesam/Downloads/assets/1x/home.png",
+      "src": "home@3x.png",
       "type": "image/png",
       "sizes": "512x512"
     }

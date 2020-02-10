@@ -43,7 +43,7 @@ const Store = () => {
           <Fragment>
             <Dropdown image={dropdownIcon} title="Choose parts" items={[{label: 'car'}]}/>
             <ContentTile
-              image={maxresdefault}
+              image={spareImage}
               content={{
                 head: 'Toyota Landcruiser Prado',
                 caption: (
