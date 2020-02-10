@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
 import { Section, TileCta, Input } from '../common'
 import  ImageAssets from '../res/images/index'
+import { NavBarContext } from '../context/navbarContext'
 
 const { add,
   airFilter,
@@ -32,6 +33,24 @@ const accesoriesLayout = [
 
 const Store = () => {
   let history = useHistory();
+  let { content, dispatch } = useContext(NavBarContext)
+  const storeHeader = <div className='nav-title'>Farsi Auto Store</div>
+
+
+  useEffect(() => {
+    updateHeader()
+  })
+
+  const updateHeader = () => {
+    if(content.headerRoute !== 'store'){
+      dispatch({
+        type: 'UPDATE_HEADER',
+        header: {
+          header: storeHeader,
+          headerRoute: 'store',
+          showSearch: false
+        }})
+    }}
 
   return (
     <div className='container store'>

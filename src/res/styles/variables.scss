@@ -35,3 +35,10 @@ body {
   letter-spacing: 0.5px;
   text-align: center;
 }
+
+.nav-title {
+  @extend .header-styles;
+
+  color: $color-white;
+  font-size: 17px;
+}

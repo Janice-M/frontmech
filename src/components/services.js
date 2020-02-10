@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import { ContentTile } from '../common'
+import { NavBarContext } from '../context/navbarContext'
 
 import  ImageAssets from '../res/images/index'
 
@@ -34,6 +35,24 @@ const serviceContent = [
 ]
 
 const Services = () => {
+  let { content, dispatch } = useContext(NavBarContext)
+  const serviceHeader = <div className='nav-title'>Book a Service</div>
+
+
+  useEffect(() => {
+    updateHeader()
+  })
+
+  const updateHeader = () => {
+    if(content.headerRoute !== 'service'){
+      dispatch({
+        type: 'UPDATE_HEADER',
+        header: {
+          header: serviceHeader,
+          headerRoute: 'service',
+          showSearch: false
+        }})
+    }}
   return (
     <div className='container service'>
       {serviceContent.map((tileContent) => (

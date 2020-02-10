@@ -1,13 +1,47 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
-import { Section, Input, Dropdown, ContentTile } from '../common'
+import { Section, Input, Dropdown, ContentTile, IconCta } from '../common'
 import  ImageAssets from '../res/images/index'
+import { NavBarContext } from '../context/navbarContext'
 
 const { add, spareImage, maxresdefault, dropdownIcon } = ImageAssets
 
-const Store = () => {
+const partsContent = [
+  {
+    image: spareImage,
+    head: 'OEM Genuine parts',
+    caption: 'Toyota sythentic motor oil, OEM Air cleaner + Oil Filter',
+    price: 'KES 6, 000'
+  },
+  {
+    image: spareImage,
+    head: 'OEM Genuine parts',
+    caption: 'Toyota sythentic motor oil, OEM Air cleaner + Oil Filter',
+    price: 'KES 6, 000'
+  }
+]
+
+const MyCar = () => {
   let history = useHistory();
+  let { content, dispatch } = useContext(NavBarContext)
+  const carHeader = <div className='nav-title'>Minor Service</div>
+
+
+  useEffect(() => {
+    updateHeader()
+  })
+
+  const updateHeader = () => {
+    if(content.headerRoute !== 'my-car'){
+      dispatch({
+        type: 'UPDATE_HEADER',
+        header: {
+          header: carHeader,
+          headerRoute: 'my-car',
+          showSearch: false
+        }})
+    }}
 
   return (
     <div className='container my-car'>
@@ -42,17 +76,19 @@ const Store = () => {
         label={
           <Fragment>
             <Dropdown image={dropdownIcon} title="Choose parts" items={[{label: 'car'}]}/>
-            <ContentTile
-              image={spareImage}
-              content={{
-                head: 'Toyota Landcruiser Prado',
-                caption: (
-                  <Fragment>
-                    <span>2018</span><br/>
-                    <span>2.8L 1GD engine</span>
-                  </Fragment>
-                )
-              }}/>
+            {partsContent.map((part) => (
+              <ContentTile
+                image={part.image}
+                content={{
+                  head: part.head,
+                  caption: (
+                    <Fragment>
+                      <span>{part.caption}</span><br/>
+                      <span className="price">{part.price}</span>
+                    </Fragment>
+                  )
+                }}/>
+            ))}
           </Fragment>
           }
         />
@@ -60,4 +96,4 @@ const Store = () => {
   );
 };
 
-export default Store;
+export default MyCar;

@@ -1,11 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
-import { Section, Image, TileCta } from '../common'
+import { Section, Image, TileCta,IconCta } from '../common'
 import  ImageAssets from '../res/images/index'
 import DesktopTemplate from './desktopTemplate'
+import { NavBarContext } from '../context/navbarContext'
 
-const { homeHero, myCar, service, shop, tints, security, diagnostics } = ImageAssets
+const { homeHero, mechLogo, myCar, service, shop, tints, security, diagnostics } = ImageAssets
 
 const dashboardLayout = [
   { label: 'Service', images: service, route: '/services'},
@@ -21,6 +22,24 @@ const servicesLayout = [
 
 const Home = () => {
   let history = useHistory();
+  let { content, dispatch } = useContext(NavBarContext)
+  const homeHeader = <IconCta icon={mechLogo[0]} iconSet={mechLogo} />
+
+  useEffect(() => {
+    updateHeader()
+  })
+
+  const updateHeader = () => {
+    if(content.headerRoute !== 'home'){
+      dispatch({
+        type: 'UPDATE_HEADER',
+        header: {
+          header: homeHeader,
+          headerRoute: 'home',
+          showSearch: true
+        }})
+    }
+  }
 
   return (
     <Fragment>
