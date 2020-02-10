@@ -3,6 +3,7 @@ import Image from './image'
 import Section from './section'
 import ContentTile from './contentTile'
 import Input from './input'
+import Dropdown from './dropdown'
 
 export {
   IconCta,
@@ -10,5 +11,6 @@ export {
   Image,
   Section,
   ContentTile,
-  Input
+  Input,
+  Dropdown
 }

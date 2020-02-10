@@ -1,29 +1,41 @@
 import React, { useState } from 'react';
 
-import IconCta from '../image';
+import Input  from '../input';
 
 
-const Dropdowm = ({title, imageStyle, placeholder}) => {
+const Dropdowm = ({title, image, imageStyle, items}) => {
   const [dropValues, setdropValues] = useState({
     dropdownOpen: false,
     dropdownTitle: title
   });
 
-  handleClickOutside(){
+  const handleClickOutside = () => {
     setdropValues({...dropValues, listOpen: false })
   }
-  toggleList(){
-    setdropValues({...dropValues, listOpen: !dropValues.listOpen })
+
+  const toggleList = () => {
+    setdropValues({...dropValues, dropdownOpen: !dropValues.dropdownOpen })
   }
 
 
   return (
-    <div className='input'>
-      <div className={`input__image ${imageStyle}`}>
-        <IconCta className="input-cta" src={image[0]} srcSet={image}/>
+    <div className='dropdown'>
+      <div onClick={() => toggleList()} className={`dropdown__header ${imageStyle}`}>
+        <Input
+          className="dropdown-cta"
+          image={image}
+          placeholder={dropValues.dropdownTitle}
+          disabled/>
       </div>
-      <div className={`input__content`}>
-      </div>
+      {dropValues.dropdownOpen &&
+        <div className={`dropdown__content`}>
+          <ul>
+            {items.map((item) => (
+              <li> {item.label} </li>
+            ))}
+          </ul>
+        </div>
+      }
     </div>
   );
 };

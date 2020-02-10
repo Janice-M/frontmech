@@ -14,9 +14,9 @@ const dashboardLayout = [
 ]
 
 const servicesLayout = [
-  { label: 'diagnostics', images: diagnostics, route: '/diagnostics'},
-  { label: 'Tints', images: tints, route: '/tints'},
-  { label: 'Security', images: security, route: '/security'}
+  { label: 'diagnostics', images: diagnostics, route: '/'},
+  { label: 'Tints', images: tints, route: '/'},
+  { label: 'Security', images: security, route: '/'}
 ]
 
 const Home = () => {

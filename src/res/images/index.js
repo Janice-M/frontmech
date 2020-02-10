@@ -118,6 +118,22 @@ import search from './search.png';
 import search2x from './search@2x.png';
 import search3x from './search@3x.png';
 
+import dropdownIcon from './dropdown-icon.png';
+import dropdownIcon2x from './dropdown-icon@2x.png';
+import dropdownIcon3x from './dropdown-icon@3x.png';
+
+import spareImage from './spare-image.png';
+import spareImage2x from './spare-image@2x.png';
+import spareImage3x from './spare-image@3x.png';
+
+import navBackIcon from './nav-back-icon.png';
+import navBackIcon2x from './nav-back-icon@2x.png';
+import navBackIcon3x from './nav-back-icon@3x.png';
+
+import maxresdefault from './maxresdefault.png';
+import maxresdefault2x from './maxresdefault@2x.png';
+import maxresdefault3x from './maxresdefault@3x.png';
+
 export default {
   mechLogo: [mechLogo, mechLogo2x, mechLogo3x],
   navCart: [navCart, navCart2x, navCart3x],
@@ -148,5 +164,9 @@ export default {
   starter: [starter, starter2x, starter3x],
   tank: [tank, tank2x, tank3x],
   search: [search, search2x, search3x],
+  dropdownIcon: [dropdownIcon, dropdownIcon2x, dropdownIcon3x],
+  spareImage: [spareImage, spareImage2x, spareImage3x],
+  navBackIcon: [navBackIcon, navBackIcon2x, navBackIcon3x],
+  maxresdefault: [maxresdefault, maxresdefault2x, maxresdefault3x],
   serviceIcon: [serviceIcon, serviceIcon2x, serviceIcon3x]
 }

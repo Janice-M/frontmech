@@ -1,0 +1,19 @@
+.dropdown {
+
+  &__header {
+
+    .input {
+      background: $color-light-grey;
+      flex-direction: row-reverse;
+
+      &__content{
+        display:flex;
+        align-items: flex-end;
+
+        .text {
+          background: $color-light-grey;
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import IconCta from '../image';
 
 
-const Input = ({image, imageStyle, placeholder}) => {
+const Input = ({image, imageStyle, placeholder, disabled}) => {
   const [text, setText] = useState({
     text: ''
   });
@@ -31,6 +31,7 @@ const Input = ({image, imageStyle, placeholder}) => {
             onChange={handleChange}
             placeholder={placeholder}
             className='text'
+            disabled={disabled ? disabled : false}
           />
       </div>
     </div>
