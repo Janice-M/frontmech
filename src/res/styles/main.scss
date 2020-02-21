@@ -1,0 +1,18 @@
+
+/* Set up Styles*/
+@import 'media.scss';
+@import 'variables.scss';
+
+/* Component styles*/
+@import '../../components/navbar';
+@import '../../components/bottomtabs';
+@import '../../components';
+
+
+/* Common styles */
+@import '../../common/ctas';
+@import '../../common/image';
+@import '../../common/section';
+@import '../../common/contentTile';
+@import '../../common/input';
+@import '../../common/dropdown';

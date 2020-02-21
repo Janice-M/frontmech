@@ -1,0 +1,25 @@
+{
+  "short_name": "MyMech",
+  "name": "My Mech",
+  "icons": [
+    {
+      "src": "home.png",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "home@2x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "home@3x.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,36 @@
+.dropdown {
+
+
+  &__header {
+    cursor: pointer;
+
+    .input {
+      flex-direction: row-reverse;
+      background:none;
+      background: $color-light-grey;
+
+
+      &__content{
+        display:flex;
+        align-items: flex-end;
+        background:none;
+        position: relative;
+
+        .text {
+          background: $color-light-grey;
+          }
+        &::before {
+          content: "";
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 10;
+      }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+
+.input {
+  width: $content-width;
+  height: 5vh;
+  margin: 15px auto;
+
+  background: $color-white;
+  box-shadow: $box-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__image {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+      width: 60%;
+    }
+  }
+
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+
+
+    .text {
+      width: 90%;
+      height: 4vh;
+      margin: auto;
+      border: none;
+      font-size: 15px;
+      font-weight: 300;
+
+      &:disabled {
+        background-color: $color-white;
+        color: $color-black;
+      }
+    }
+  }
+}

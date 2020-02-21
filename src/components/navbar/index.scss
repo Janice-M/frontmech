@@ -1,0 +1,57 @@
+%nav-default-size {
+  height: $page-height/4;
+  width: $page-width;
+}
+
+.nav {
+  @include for-phone-only {
+   }
+}
+
+.nav-content {
+  position: relative;
+
+  &__image {
+    @extend %nav-default-size;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__icon-row {
+    height: 5vh;
+    width: $content-width;
+    margin: 5vh 5vw;
+
+    display: flex;
+
+    @include for-tablet-landscape-up () {
+      display: none;
+    }
+
+    &--section {
+      width: $content-width/4;
+      display: flex;
+    }
+  }
+
+  .checkout-section {
+    display: flex;
+    justify-content: flex-end;
+
+    .icon-cta {
+      margin: 0 5px;
+    }
+  }
+
+  .nav-header {
+    width: $content-width/2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar {
+    cursor: pointer;
+  }
+}

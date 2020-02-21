@@ -1,0 +1,34 @@
+.bottom-tab {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+
+  bottom: 0;
+  z-index: 5;
+
+  width: 100vw;
+  height: 10vh;
+  box-shadow: $box-shadow;
+  background: $color-white;
+
+  @include for-tablet-landscape-up () {
+    display: none;
+  }
+
+  .tile-cta {
+    height: inherit;
+    box-shadow: none;
+
+    &__image {
+      width: 35%;
+      margin-bottom: unset;
+    }
+
+    &__label {
+      font-size: 12px;
+      height: unset;
+      padding-bottom: 5px;
+      color: $color-grey;
+    }
+  }
+}
