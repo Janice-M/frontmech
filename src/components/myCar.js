@@ -50,6 +50,7 @@ const MyCar = () => {
             <Dropdown image={dropdownIcon} title="Choose car" items={[{label: 'car'}]}/>
             <ContentTile
               image={maxresdefault}
+              handleClick={() => {}}
               content={{
                 head: 'Toyota Landcruiser Prado',
                 caption: (
@@ -78,6 +79,7 @@ const MyCar = () => {
               <ContentTile
                 key={i}
                 image={part.image}
+                handleClick={() => {}}
                 content={{
                   head: part.head,
                   caption: (
