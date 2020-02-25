@@ -1,7 +1,7 @@
 
 import React, { createContext, useReducer } from 'react';
 
-import {reducer} from './reducer'
+import {reducer} from '../api/reducer'
 
 export const NavBarContext = createContext();
 

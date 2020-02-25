@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import { useHistory } from "react-router-dom";
 
-import { NavBarContext } from '../../context/navbarContext'
+import { NavBarContext } from '../../data/context/navbarContext'
 import { IconCta, Image } from '../../common'
 import  ImageAssets from '../../res/images/index'
 

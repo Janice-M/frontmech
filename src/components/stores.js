@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import { Section, TileCta, Input } from '../common'
 import  ImageAssets from '../res/images/index'
-import { NavBarContext } from '../context/navbarContext'
+import { NavBarContext } from '../data/context/navbarContext'
 
 const { add,
   airFilter,
@@ -61,8 +61,9 @@ const Store = () => {
         labelStyle='category'
         label={
           <div className='tiles'>
-            {categoriesLayout.map((category) => (
+            {categoriesLayout.map((category, i) => (
               <TileCta
+                key={i}
                 handleClick={() => history.push(category.route)}
                 label={category.label}
                 image={category.images}
@@ -76,8 +77,9 @@ const Store = () => {
         labelStyle='accesories'
         label={
           <div className='tiles'>
-            {accesoriesLayout.map((accesory) => (
+            {accesoriesLayout.map((accesory, i) => (
               <TileCta
+                key={i}
                 handleClick={() => history.push(accesory.route)}
                 label={accesory.label}
                 image={accesory.images}

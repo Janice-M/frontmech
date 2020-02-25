@@ -18,8 +18,9 @@ const BottomTab = () => {
 
   return (
     <div className='bottom-tab'>
-      {bottomActions.map((action) => (
+      {bottomActions.map((action, i) => (
         <TileCta
+          key={i}
           handleClick={() => history.push(action.route)}
           label={action.label}
           image={action.images}

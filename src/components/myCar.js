@@ -2,7 +2,7 @@ import React, { Fragment, useContext, useEffect } from 'react';
 
 import { Section, Input, Dropdown, ContentTile } from '../common'
 import  ImageAssets from '../res/images/index'
-import { NavBarContext } from '../context/navbarContext'
+import { NavBarContext } from '../data/context/navbarContext'
 
 const { add, spareImage, maxresdefault, dropdownIcon } = ImageAssets
 
@@ -74,8 +74,9 @@ const MyCar = () => {
         label={
           <Fragment>
             <Dropdown image={dropdownIcon} title="Choose parts" items={[{label: 'car'}]}/>
-            {partsContent.map((part) => (
+            {partsContent.map((part, i) => (
               <ContentTile
+                key={i}
                 image={part.image}
                 content={{
                   head: part.head,
