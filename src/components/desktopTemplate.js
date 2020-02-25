@@ -13,7 +13,7 @@ const Home = () => {
       <div className="desktop-caption">
         <div className="header-styles">Desktop Version Coming Soon!<div>
         <div className="label-styles">
-          We are currently working on the desktop version
+          We are currently working on the desktop version,
           currently the site is only available on mobile<span role="img" aria-label="smiley">😊</span>.
         </div>
           </div>

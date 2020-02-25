@@ -17,7 +17,7 @@ const NavBar = () => {
       <div className='nav-content' >
         <Image className='nav-content__image' src={backDrop} />
         <div className='nav-content__icon-row'>
-          <div onClick={() => history.goBack()} className='nav-content__icon-row--section sidebar'>
+          <div onClick={() => history.push('/')} className='nav-content__icon-row--section sidebar'>
             <IconCta icon={content.showSearch? sideBarIcon: navBackIcon} />
           </div>
           <div className='nav-content__icon-row--section nav-header'>
