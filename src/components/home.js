@@ -23,7 +23,7 @@ const servicesLayout = [
 const Home = () => {
   let history = useHistory();
   let { content, dispatch } = useContext(NavBarContext)
-  const homeHeader = <IconCta icon={mechLogo[0]} iconSet={mechLogo} />
+  const homeHeader = <IconCta icon={mechLogo} />
 
   useEffect(() => {
     updateHeader()
@@ -44,7 +44,7 @@ const Home = () => {
   return (
     <Fragment>
       <div className='container home'>
-        <Image className="hero" src={homeHero[0]} srcSet={homeHero}/>
+        <Image className="hero" src={homeHero} />
         <Section
           header='My Dashboard'
           label={
@@ -53,8 +53,7 @@ const Home = () => {
                 <TileCta
                   handleClick={() => history.push(dashboardItem.route)}
                   label={dashboardItem.label}
-                  image={dashboardItem.images[0]}
-                  imageSet={dashboardItem.images}
+                  image={dashboardItem.images}
                   />
               ))}
             </div>
@@ -69,8 +68,7 @@ const Home = () => {
                 <TileCta
                   handleClick={() => history.push(service.route)}
                   label={service.label}
-                  image={service.images[0]}
-                  imageSet={service.images}
+                  image={service.images}
                   />
               ))}
             </div>

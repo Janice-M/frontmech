@@ -22,8 +22,7 @@ const BottomTab = () => {
         <TileCta
           handleClick={() => history.push(action.route)}
           label={action.label}
-          image={action.images[0]}
-          imageSet={action.images}
+          image={action.images}
           />
       ))}
     </div>

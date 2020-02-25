@@ -15,19 +15,19 @@ const NavBar = () => {
   return (
     <div className='nav' >
       <div className='nav-content' >
-        <Image className='nav-content__image' src={backDrop[0]} srcSet={backDrop} />
+        <Image className='nav-content__image' src={backDrop} />
         <div className='nav-content__icon-row'>
           <div onClick={() => history.goBack()} className='nav-content__icon-row--section sidebar'>
-            <IconCta icon={content.showSearch? sideBarIcon[0]: navBackIcon[0]} iconSet={content.showSearch? sideBarIcon : navBackIcon } />
+            <IconCta icon={content.showSearch? sideBarIcon: navBackIcon} />
           </div>
           <div className='nav-content__icon-row--section nav-header'>
             {content.header}
           </div>
           <div className='nav-content__icon-row--section checkout-section'>
             {content.showSearch &&
-              <IconCta icon={navSearch[0]} iconSet={navSearch} />
+              <IconCta icon={navSearch}/>
             }
-            <IconCta icon={navCart[0]} iconSet={navCart} />
+            <IconCta icon={navCart} />
           </div>
         </div>
       </div>

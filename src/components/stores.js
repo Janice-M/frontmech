@@ -65,8 +65,7 @@ const Store = () => {
               <TileCta
                 handleClick={() => history.push(category.route)}
                 label={category.label}
-                image={category.images[0]}
-                imageSet={category.images}
+                image={category.images}
                 />
             ))}
           </div>
@@ -81,8 +80,7 @@ const Store = () => {
               <TileCta
                 handleClick={() => history.push(accesory.route)}
                 label={accesory.label}
-                image={accesory.images[0]}
-                imageSet={accesory.images}
+                image={accesory.images}
                 />
             ))}
           </div>
