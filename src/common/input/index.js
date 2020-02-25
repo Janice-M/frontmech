@@ -8,10 +8,6 @@ const Input = ({image, imageStyle, placeholder, disabled}) => {
     text: ''
   });
 
-  const handleSubmit = e => {
-    e.preventDefault();
-  };
-
   const handleChange = e => {
     setText({ [e.target.name]: e.target.value });
   };

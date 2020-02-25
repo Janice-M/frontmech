@@ -6,7 +6,7 @@ import { NavBarContext } from '../../context/navbarContext'
 import { IconCta, Image } from '../../common'
 import  ImageAssets from '../../res/images/index'
 
-const { mechLogo, navCart, navSearch, sideBarIcon, backDrop, navBackIcon } = ImageAssets
+const { navCart, navSearch, sideBarIcon, backDrop, navBackIcon } = ImageAssets
 
 const NavBar = () => {
   const { content } = useContext(NavBarContext);

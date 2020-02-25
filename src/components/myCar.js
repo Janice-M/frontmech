@@ -1,7 +1,6 @@
 import React, { Fragment, useContext, useEffect } from 'react';
-import { useHistory } from "react-router-dom";
 
-import { Section, Input, Dropdown, ContentTile, IconCta } from '../common'
+import { Section, Input, Dropdown, ContentTile } from '../common'
 import  ImageAssets from '../res/images/index'
 import { NavBarContext } from '../context/navbarContext'
 
@@ -23,7 +22,6 @@ const partsContent = [
 ]
 
 const MyCar = () => {
-  let history = useHistory();
   let { content, dispatch } = useContext(NavBarContext)
   const carHeader = <div className='nav-title'>Minor Service</div>
 
