@@ -1,9 +1,8 @@
 import React, { Fragment, useContext, useEffect } from 'react';
-import { useHistory } from "react-router-dom";
 
-import { Section, Input, Dropdown, ContentTile, IconCta } from '../common'
+import { Section, Input, Dropdown, ContentTile } from '../common'
 import  ImageAssets from '../res/images/index'
-import { NavBarContext } from '../context/navbarContext'
+import { NavBarContext } from '../data/context/navbarContext'
 
 const { add, spareImage, maxresdefault, dropdownIcon } = ImageAssets
 
@@ -23,7 +22,6 @@ const partsContent = [
 ]
 
 const MyCar = () => {
-  let history = useHistory();
   let { content, dispatch } = useContext(NavBarContext)
   const carHeader = <div className='nav-title'>Minor Service</div>
 
@@ -76,8 +74,9 @@ const MyCar = () => {
         label={
           <Fragment>
             <Dropdown image={dropdownIcon} title="Choose parts" items={[{label: 'car'}]}/>
-            {partsContent.map((part) => (
+            {partsContent.map((part, i) => (
               <ContentTile
+                key={i}
                 image={part.image}
                 content={{
                   head: part.head,

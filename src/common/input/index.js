@@ -8,10 +8,6 @@ const Input = ({image, imageStyle, placeholder, disabled}) => {
     text: ''
   });
 
-  const handleSubmit = e => {
-    e.preventDefault();
-  };
-
   const handleChange = e => {
     setText({ [e.target.name]: e.target.value });
   };
@@ -20,7 +16,7 @@ const Input = ({image, imageStyle, placeholder, disabled}) => {
   return (
     <div className='input'>
       <div className={`input__image ${imageStyle}`}>
-        <IconCta className="input-cta" src={image[0]} srcSet={image}/>
+        <IconCta className="input-cta" src={image} />
       </div>
       <div className={`input__content`}>
           <input

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useHistory } from "react-router-dom";
 
 import { TileCta } from '../../common'
@@ -18,12 +18,12 @@ const BottomTab = () => {
 
   return (
     <div className='bottom-tab'>
-      {bottomActions.map((action) => (
+      {bottomActions.map((action, i) => (
         <TileCta
+          key={i}
           handleClick={() => history.push(action.route)}
           label={action.label}
-          image={action.images[0]}
-          imageSet={action.images}
+          image={action.images}
           />
       ))}
     </div>

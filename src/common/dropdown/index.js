@@ -9,10 +9,6 @@ const Dropdowm = ({title, image, imageStyle, items}) => {
     dropdownTitle: title
   });
 
-  const handleClickOutside = () => {
-    setdropValues({...dropValues, listOpen: false })
-  }
-
   const toggleList = () => {
     setdropValues({...dropValues, dropdownOpen: !dropValues.dropdownOpen })
   }

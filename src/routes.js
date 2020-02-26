@@ -8,7 +8,8 @@ import MyCar from './components/myCar'
 import Stores from './components/stores'
 import Navbar from './components/navbar/index'
 import BottomTab from './components/bottomtabs/'
-import NavContextProvider from './context/navbarContext'
+import NavContextProvider from './data/context/navbarContext'
+import ProductsProvider from './data/context/productsContext'
 
 
 import './res/styles/main.scss'
@@ -16,16 +17,18 @@ import './res/styles/main.scss'
 const App = () => {
   return (
     <NavContextProvider>
-      <BrowserRouter>
-        <Navbar />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/services' component={Services} />
-          <Route path='/store' component={Stores} />
-          <Route path='/my-car' component={MyCar} />
-        </Switch>
-        <BottomTab />
-      </BrowserRouter>
+      <ProductsProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/services' component={Services} />
+            <Route path='/store' component={Stores} />
+            <Route path='/my-car' component={MyCar} />
+          </Switch>
+          <BottomTab />
+        </BrowserRouter>
+      </ProductsProvider>
     </NavContextProvider>
   );
 };

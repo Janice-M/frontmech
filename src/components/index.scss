@@ -5,6 +5,7 @@
 
   position: relative;
   z-index: 5;
+  margin-bottom: 10vh;
 
   @include for-tablet-landscape-up () {
     display: none;
