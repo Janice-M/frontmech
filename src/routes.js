@@ -9,15 +9,16 @@ import Stores from './components/stores'
 import Navbar from './components/navbar/index'
 import BottomTab from './components/bottomtabs/'
 import NavContextProvider from './data/context/navbarContext'
-import ProductsProvider from './data/context/productsContext'
+import Store from './data/context/storeContext'
 
 
 import './res/styles/main.scss'
 
 const App = () => {
   return (
+    <Store>
+
     <NavContextProvider>
-      <ProductsProvider>
         <BrowserRouter>
           <Navbar />
           <Switch>
@@ -28,8 +29,8 @@ const App = () => {
           </Switch>
           <BottomTab />
         </BrowserRouter>
-      </ProductsProvider>
     </NavContextProvider>
+  </Store>
   );
 };
 

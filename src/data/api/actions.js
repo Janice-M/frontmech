@@ -1,17 +1,20 @@
 import { getProducts } from './apiAction'
+import constants from './actionConstants'
 
 export const headerUpdateAction = (dispatch, info) => {
   return dispatch({
-    type: 'UPDATE_HEADER',
+    type: constants.UPDATE_HEADER,
     header: info})
 }
 
 export const fetchProducts = async (dispatch) => {
   try {
-    dispatch({type: 'FETCH_PRODUCTS'})
+    dispatch({type: constants.FETCH_PRODUCTS})
     const response = await getProducts()
-    return dispatch({type: 'FETCH_PRODUCTS_SUCCESS', response})
+
+    const  { data } = response
+    return dispatch({type: constants.FETCH_PRODUCTS_SUCCESS, data})
   } catch (e) {
-    return dispatch({type: 'FETCH_PRODUCTS_FAILURE'});
+    return dispatch({type: constants.FETCH_PRODUCTS_FAILURE});
   }
 }

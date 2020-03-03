@@ -1,6 +1,8 @@
+import constants from './actionConstants'
+
 export const reducer = (state, action) => {
   switch (action.type) {
-    case "UPDATE_HEADER":
+    case constants.UPDATE_HEADER:
       return {
         ...state,
         headerRoute: action.header.headerRoute,
@@ -12,19 +14,19 @@ export const reducer = (state, action) => {
   }
 }
 
-export const productReducer = (state, action) => {
+export const storeReducer = (state, action) => {
   console.log(action.type);
   switch (action.type) {
-    case "FETCH_PRODUCTS":
+    case constants.FETCH_PRODUCTS:
       return {
         ...state
       };
-    case "FETCH_PRODUCTS_SUCCESS":
+    case constants.FETCH_PRODUCTS_SUCCESS:
       return {
         ...state,
-        data: action.response
+        products: action.data.products
       };
-    case "FETCH_PRODUCTS_FAILURE":
+    case constants.FETCH_PRODUCTS_FAILURE:
       return {
         ...state
       };
