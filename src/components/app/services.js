@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
-import { ContentTile } from '../common'
-import { NavBarContext } from '../data/context/navbarContext'
+import { ContentTile } from '../../common'
+import { NavBarContext } from '../../data/context/navbarContext'
 
-import  ImageAssets from '../res/images/index'
+import  ImageAssets from '../../res/images/index'
 
 const { diagnosticsIcon, suspensionIcon, starterIcon, brakeIcon, serviceIcon } = ImageAssets
 

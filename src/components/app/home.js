@@ -1,12 +1,12 @@
 import React, { Fragment, useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
-import { Section, Image, TileCta,IconCta } from '../common'
-import  ImageAssets from '../res/images/index'
-import DesktopTemplate from './desktopTemplate'
-import { NavBarContext } from '../data/context/navbarContext'
-import { storeContext } from '../data/context/storeContext'
-import { headerUpdateAction, fetchProducts } from '../data/api/actions'
+import { Section, Image, TileCta,IconCta } from '../../common'
+import  ImageAssets from '../../res/images/index'
+import DesktopTemplate from '../temp/desktopTemplate'
+import { NavBarContext } from '../../data/context/navbarContext'
+import { storeContext } from '../../data/context/storeContext'
+import { headerUpdateAction, fetchProducts, fetchServices } from '../../data/api/actions'
 
 const { homeHero, mechLogo, myCar, service, shop, tints, security, diagnostics } = ImageAssets
 
@@ -42,6 +42,7 @@ const Home = () => {
 
   useEffect(() => {
     fetchProducts(dispatch)
+    fetchServices(dispatch)
 
     handleHeaderUpdate()// eslint-disable-next-line
   }, [])

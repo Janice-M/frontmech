@@ -17,10 +17,6 @@ export const reducer = (state, action) => {
 export const storeReducer = (state, action) => {
   console.log(action.type);
   switch (action.type) {
-    case constants.FETCH_PRODUCTS:
-      return {
-        ...state
-      };
     case constants.FETCH_PRODUCTS_SUCCESS:
       return {
         ...state,
@@ -30,7 +26,16 @@ export const storeReducer = (state, action) => {
       return {
         ...state
       };
+    case constants.FETCH_SERVICES_SUCCESS:
+      return {
+        ...state,
+        products: action.data.services
+      };
+    case constants.FETCH_SERVICES_FAILURE:
+      return {
+        ...state
+      };
     default:
-
+      return state
   }
 }
