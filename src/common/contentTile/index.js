@@ -2,10 +2,10 @@ import React from 'react';
 import IconCta from '../image';
 
 
-const ContentTile = ({image, imageStyle, content, contentStyle}) => {
+const ContentTile = ({image, imageStyle, content, contentStyle, handleClick}) => {
   const { head, caption} = content
   return (
-    <div className='content-tile'>
+    <div onClick={() => handleClick()} className='content-tile'>
       <div className={`content-tile__image ${imageStyle}`}>
         <IconCta className="" src={image}/>
       </div>

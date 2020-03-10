@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Image, } from '../common'
-import  ImageAssets from '../res/images/index'
+import { Image, } from '../../common'
+import  ImageAssets from '../../res/images/index'
 
 const { homeHero } = ImageAssets
 

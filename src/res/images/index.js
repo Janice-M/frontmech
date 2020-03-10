@@ -134,6 +134,14 @@ import maxresdefault from './maxresdefault.png';
 import maxresdefault2x from './maxresdefault@2x.png';
 import maxresdefault3x from './maxresdefault@3x.png';
 
+import login from './login.png';
+import login2x from './login@2x.png';
+import login3x from './login@3x.png';
+
+import signup from './signup.png';
+import signup2x from './signup@2x.png';
+import signup3x from './signup@3x.png';
+
 export default {
   mechLogo: [mechLogo, mechLogo2x, mechLogo3x],
   navCart: [navCart, navCart2x, navCart3x],
@@ -168,5 +176,7 @@ export default {
   spareImage: [spareImage, spareImage2x, spareImage3x],
   navBackIcon: [navBackIcon, navBackIcon2x, navBackIcon3x],
   maxresdefault: [maxresdefault, maxresdefault2x, maxresdefault3x],
-  serviceIcon: [serviceIcon, serviceIcon2x, serviceIcon3x]
+  login: [login, login2x, login3x],
+  serviceIcon: [serviceIcon, serviceIcon2x, serviceIcon3x],
+  signup: [signup, signup2x, signup3x]
 }

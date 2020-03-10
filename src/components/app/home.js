@@ -1,12 +1,12 @@
 import React, { Fragment, useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
-import { Section, Image, TileCta,IconCta } from '../common'
-import  ImageAssets from '../res/images/index'
-import DesktopTemplate from './desktopTemplate'
-import { NavBarContext } from '../data/context/navbarContext'
-import { ProductsContext } from '../data/context/productsContext'
-import { headerUpdateAction, fetchProducts } from '../data/api/actions'
+import { Section, Image, TileCta,IconCta } from '../../common'
+import  ImageAssets from '../../res/images/index'
+import DesktopTemplate from '../temp/desktopTemplate'
+import { NavBarContext } from '../../data/context/navbarContext'
+import { storeContext } from '../../data/context/storeContext'
+import { headerUpdateAction, fetchProducts, fetchServices } from '../../data/api/actions'
 
 const { homeHero, mechLogo, myCar, service, shop, tints, security, diagnostics } = ImageAssets
 
@@ -25,8 +25,8 @@ const servicesLayout = [
 const Home = () => {
   let history = useHistory();
   let navDispatch = useContext(NavBarContext).dispatch
-  let productDispatch = useContext(ProductsContext)
-  const { content, dispatch } = productDispatch
+  let store = useContext(storeContext)
+  const { content,  dispatch } = store
 
   const homeHeader = <IconCta icon={mechLogo} />
 
@@ -42,9 +42,12 @@ const Home = () => {
 
   useEffect(() => {
     fetchProducts(dispatch)
+    fetchServices(dispatch)
 
     handleHeaderUpdate()// eslint-disable-next-line
-  }, [dispatch, content.data])
+  }, [])
+
+  console.log(content);
 
   return (
     <Fragment>

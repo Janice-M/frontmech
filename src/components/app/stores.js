@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
-import { Section, TileCta, Input } from '../common'
-import  ImageAssets from '../res/images/index'
-import { NavBarContext } from '../data/context/navbarContext'
+import { Section, TileCta, Input } from '../../common'
+import  ImageAssets from '../../res/images/index'
+import { NavBarContext } from '../../data/context/navbarContext'
 
 const { add,
   airFilter,

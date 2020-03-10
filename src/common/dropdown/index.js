@@ -13,6 +13,11 @@ const Dropdowm = ({title, image, imageStyle, items}) => {
     setdropValues({...dropValues, dropdownOpen: !dropValues.dropdownOpen })
   }
 
+  const handleClick = (item) => {
+    setdropValues({...dropValues,
+      dropdownTitle: item.label,
+      dropdownOpen: !dropValues.dropdownOpen })
+  }
 
   return (
     <div  className='dropdown'>
@@ -24,10 +29,10 @@ const Dropdowm = ({title, image, imageStyle, items}) => {
           disabled/>
       </div>
       {dropValues.dropdownOpen &&
-        <div className={`dropdown__content`}>
+        <div className="dropdown__content">
           <ul>
-            {items.map((item) => (
-              <li> {item.label} </li>
+            {items.map((item, i) => (
+              <li key={i} onClick={() => handleClick(item)}> {item.label} </li>
             ))}
           </ul>
         </div>

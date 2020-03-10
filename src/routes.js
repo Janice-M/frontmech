@@ -1,35 +1,23 @@
 
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
 
-import Home from './components/home'
-import Services from './components/services'
-import MyCar from './components/myCar'
-import Stores from './components/stores'
-import Navbar from './components/navbar/index'
-import BottomTab from './components/bottomtabs/'
-import NavContextProvider from './data/context/navbarContext'
-import ProductsProvider from './data/context/productsContext'
+import AuthRoutes from './components/auth/index'
+import AppRoutes from './components/app/index'
+
+import Store from './data/context/storeContext'
 
 
 import './res/styles/main.scss'
 
 const App = () => {
   return (
-    <NavContextProvider>
-      <ProductsProvider>
+    <Store>
         <BrowserRouter>
-          <Navbar />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/services' component={Services} />
-            <Route path='/store' component={Stores} />
-            <Route path='/my-car' component={MyCar} />
-          </Switch>
-          <BottomTab />
+            <AuthRoutes />    
+            <AppRoutes />
         </BrowserRouter>
-      </ProductsProvider>
-    </NavContextProvider>
+  </Store>
   );
 };
 

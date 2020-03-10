@@ -1,5 +1,5 @@
 .dropdown {
-
+  position: relative;
 
   &__header {
     cursor: pointer;
@@ -30,6 +30,31 @@
           z-index: 10;
       }
 
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    background: $color-white;
+    width: $content-width - 10vw;
+    border-top: 0;
+    left: 0;
+    box-shadow: $box-shadow;
+
+
+    ul {
+      @extend .label-styles;
+
+      text-align: left;
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        border-bottom: 0.5px solid $color-light-grey;
+        height: 25px;
+        cursor: pointer;
+        padding-left: 15px;
       }
     }
   }
