@@ -14,7 +14,6 @@ const App = () => {
   return (
     <Store>
         <BrowserRouter>
-            <AuthRoutes />    
             <AppRoutes />
         </BrowserRouter>
   </Store>

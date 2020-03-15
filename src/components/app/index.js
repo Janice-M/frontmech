@@ -11,19 +11,10 @@ import BottomTab from '../bottomtabs/'
 
 import NavContextProvider from '../../data/context/navbarContext'
 
-export const AppWrapper = (props) => {
-  return (
-    <Fragment>
-      <Navbar />
-        { props.children }
-      <BottomTab />
-    </Fragment>
-  )
-}
-
 const App = () => {
   return (
     <NavContextProvider>
+      <Navbar />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/services' component={Services} />
@@ -31,6 +22,7 @@ const App = () => {
         <Route path='/store' component={Stores} />
         <Route path='/my-car' component={MyCar} />
       </Switch>
+      <BottomTab />
     </NavContextProvider>
 
   );

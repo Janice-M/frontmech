@@ -1,0 +1,36 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $page-width;
+  height: $page-height;
+  background: $black-opacity;
+  z-index: 1000;
+
+
+  &__main {
+    position:fixed;
+    background: $color-white;
+    width: $content-width;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    overflow: scroll;
+  }
+
+  button {
+    position:fixed;
+    top: 10vh;
+    right: 5vw;
+    z-index: 2000;
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
