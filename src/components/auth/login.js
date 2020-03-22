@@ -18,7 +18,7 @@ const Login = () => {
       </div>
       <div className="auth__fields">
         <Input placeholder="Email" showIcon={false}/>
-        <Input placeholder="Password" showIcon={false}/>
+        <Input type="password" placeholder="Password" showIcon={false}/>
         <div className="auth__fields--actions">
           <div>
             <Input

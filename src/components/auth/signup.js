@@ -6,7 +6,14 @@ import  ImageAssets from '../../res/images/index'
 
 const { signup } = ImageAssets
 
-const Fields = [ 'First Name', 'Last Name', 'Username', 'Email', 'Password', 'Confirm Password']
+const Fields = [
+  {name: 'First Name', type: 'text'},
+  {name: 'Last Name', type: 'text'},
+  {name: 'Username', type: 'text'},
+  {name: 'Email', type: 'text'},
+  {name: 'Password', type: 'password'},
+  {name: 'Confirm Password', type: 'password'},
+  ]
 
 const Signup = () => {
   return (
@@ -20,7 +27,11 @@ const Signup = () => {
         </div>
         <div className="auth__fields">
           {Fields.map((field, i) => (
-            <Input key={i} placeholder={field} showIcon={false}/>
+            <Input
+              key={i}
+              placeholder={field.name}
+              showIcon={false}
+              type={field.type}/>
           ))}
           <TileCta
             handleClick={() => {}}
