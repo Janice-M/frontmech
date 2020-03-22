@@ -1,8 +1,6 @@
-import React, { Fragment, useContext, useEffect } from 'react';
+import React, { Fragment, useContext, useEffect, useState } from 'react';
 
-import AppWrapper from './index'
-
-import { Section, Input, Dropdown, ContentTile } from '../../common'
+import { Section, Input, Dropdown, ContentTile, Map, Modal } from '../../common'
 import  ImageAssets from '../../res/images/index'
 import { NavBarContext } from '../../data/context/navbarContext'
 
@@ -35,7 +33,8 @@ const packages = [
 ]
 
 const MyCar = () => {
-  let { content, dispatch } = useContext(NavBarContext)
+  const [ showModal, handleShowModal] = useState(false)
+  const { content, dispatch } = useContext(NavBarContext)
   const carHeader = <div className='nav-title'>Minor Service</div>
 
 
@@ -54,9 +53,15 @@ const MyCar = () => {
         }})
     }}
 
+    const toggleModal = () => {
+      handleShowModal(!showModal)
+    }
+
   return (
-    <AppWrapper>
       <div className='container my-car'>
+        <Modal contentStyles='map-section__map' handleClose={() => toggleModal()} show={showModal}>
+          <Map />
+        </Modal>
         <Section
           header='Which car do you want to service?'
           label={
@@ -80,8 +85,11 @@ const MyCar = () => {
           />
         <Section
           header='Where will the service be done?'
+          labelStyle='map-section'
           label={
-              <Dropdown image={dropdownIcon} title="Select the location on map" items={[{label: 'car'}]}/>
+            <div onClick={() => toggleModal()}>
+              <Dropdown image={dropdownIcon} title="Select the location on map" items={[]}/>
+            </div>
             }
           />
         <Section
@@ -108,7 +116,6 @@ const MyCar = () => {
             }
           />
       </div>
-    </AppWrapper>
   );
 };
 

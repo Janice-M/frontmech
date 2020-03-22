@@ -6,19 +6,22 @@ import AuthRoutes from './components/auth/index'
 import AppRoutes from './components/app/index'
 
 import Store from './data/context/storeContext'
+import NavBarContextProvider from './data/context/navbarContext'
 
 
 import './res/styles/main.scss'
 
-const App = () => {
+const Routes = () => {
   return (
     <Store>
+      <NavBarContextProvider>
         <BrowserRouter>
-            <AuthRoutes />    
-            <AppRoutes />
+          <AuthRoutes />
+          <AppRoutes />
         </BrowserRouter>
+      </NavBarContextProvider>
   </Store>
   );
 };
 
-export default App;
+export default Routes;

@@ -5,13 +5,13 @@ import { Route, Switch } from 'react-router-dom';
 import Login from './login'
 import SignUp from './signup'
 
-const App = () => {
+const AuthRoutes = () => {
   return (
-      <Switch>
+      <Fragment>
         <Route exact path='/login' component={Login} />
         <Route exact path='/signup' component={SignUp} />
-      </Switch>
+      </Fragment>
   );
 };
 
-export default App;
+export default AuthRoutes;

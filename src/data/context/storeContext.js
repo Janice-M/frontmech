@@ -10,7 +10,9 @@ const initialState = {
   vehicles: [],
   services: [],
   categories: [],
-  parts: []
+  parts: [],
+  userProfile: {},
+  isAuthenticated: false
 }
 
 export const storeContext = createContext(initialState);

@@ -4,6 +4,8 @@ import Section from './section'
 import ContentTile from './contentTile'
 import Input from './input'
 import Dropdown from './dropdown'
+import Map from './map'
+import Modal from './modal'
 
 export {
   IconCta,
@@ -12,5 +14,7 @@ export {
   Section,
   ContentTile,
   Input,
-  Dropdown
+  Dropdown,
+  Map,
+  Modal
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const Section = ({header, headerStyle, label, labelStyle}) => {
   return (
     <div className='section'>
-      <div className={`section__header ${labelStyle}`}>
+      <div className={`section__header ${headerStyle}`}>
         <span>  {header}  </span>
       </div>
       <div className={`section__label ${labelStyle}`}>

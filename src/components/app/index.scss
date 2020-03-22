@@ -194,10 +194,18 @@
       }
     }
   }
+
+.map-section{
+  &__map {
+    width: $content-width;
+    height: $page-height/1.5;
+  }
+}
+
 }
 
 .support {
-  
+
   .support-hero {
     width: inherit;
 
