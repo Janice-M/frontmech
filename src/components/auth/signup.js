@@ -1,4 +1,5 @@
 import React,{ useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Input, Image, TileCta } from '../../common'
 import  ImageAssets from '../../res/images/index'
@@ -30,7 +31,7 @@ const Signup = () => {
         <div className="auth__footer">
           <span>
             Already have an account ?
-            <span className="link">  Login</span>
+            <Link className="link"  to="/login">  Login</Link>
           </span>
         </div>
     </div>

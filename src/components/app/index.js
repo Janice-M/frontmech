@@ -1,5 +1,5 @@
-import React, { Fragment} from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useContext, Fragment} from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Home from './home'
 import Services from './services'
@@ -10,20 +10,34 @@ import Navbar from '../navbar/index'
 import BottomTab from '../bottomtabs/'
 
 import NavContextProvider from '../../data/context/navbarContext'
+import { storeContext } from '../../data/context/storeContext'
 
 const App = () => {
+  let store = useContext(storeContext)
+  const { content,  dispatch } = store
+
+
+  const PrivateRoutes = ({ component: Component, ...rest}) => (
+    <Route {...rest} render={(props) => (
+        content.isAuthenticated === true
+          ? (
+            <Fragment>
+              <Navbar />
+                <Component {...props} />
+              <BottomTab />
+            </Fragment>
+          )
+          : <Redirect to='/login' />
+      )} />
+  )
   return (
-    <NavContextProvider>
-      <Navbar />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/services' component={Services} />
-        <Route path='/support' component={Support} />
-        <Route path='/store' component={Stores} />
-        <Route path='/my-car' component={MyCar} />
-      </Switch>
-      <BottomTab />
-    </NavContextProvider>
+    <Fragment>
+        <PrivateRoutes exact path='/' component={Home} />
+        <PrivateRoutes path='/services' component={Services} />
+        <PrivateRoutes path='/support' component={Support} />
+        <PrivateRoutes path='/store' component={Stores} />
+        <PrivateRoutes path='/my-car' component={MyCar} />
+    </Fragment>
 
   );
 };
